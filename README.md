@@ -56,8 +56,34 @@ Então sabendo que o nosso IP PÚBLICO é o 177.1.1.2 que está configurado no M
 
 # Acessando o servidor linux via terminal
 
-Com nosso MIKROTIK configurado (empresa A, Operado 1), acessamos nosso linux (Colaborador, Operadora 2), no terminal digitamos "curl -I http://177.1.1.2:9090". Com isso, fazemos a solicitação via navegador onde conseguirmemos alcançar nosso servidor linux, constando que obtivemos êxito no redirecionamento das portas.
+Com nosso MIKROTIK configurado (empresa A, Operadora 1), acessamos nosso linux (Colaborador, Operadora 2), no terminal digitamos "curl -I http://177.1.1.2:9090". Com isso, fazemos a solicitação via navegador onde conseguirmemos alcançar nosso servidor linux, constando que obtivemos êxito no redirecionamento das portas.
 
 ![image alt](https://github.com/Franco-Bruno/modelo-osi-and-nat/blob/main/imagens/acesso-webserver-and-port-tcp.png)
 
 Fonte: elaborado pelo autor (2026)
+
+Podemos ver a seguir os pacotes sendo enviados na rede.
+
+![image alt](https://github.com/Franco-Bruno/modelo-osi-and-nat/blob/main/imagens/captura-trafego-mikrotik.png)
+
+Fonte: elaborado pelo autor (2026)
+
+Conexãoes estabelecidas no MIKROTIK, mostrando a origem e destino.
+
+![image alt](https://github.com/Franco-Bruno/modelo-osi-and-nat/blob/main/imagens/captura-trafego.png)
+
+Fonte: elaborado pelo autor (2026)
+
+Podemos ainda ver de forma bem detalhada, como a origem, destino, portas.
+
+![image alt](https://github.com/Franco-Bruno/modelo-osi-and-nat/blob/main/imagens/trafego-detalhado.png)
+
+Fonte: elaborado pelo autor (2026)
+
+E também foi preciso simular um roteamento(BGP) estre as redes para que pudessem cada uma ter acesso à internet, mas também serem alcançáveis entre si.
+
+![image alt](https://github.com/Franco-Bruno/modelo-osi-and-nat/blob/main/imagens/roteamentoBGP-routes.png)
+
+Fonte: elaborado pelo autor (2026)
+
+# 
