@@ -54,6 +54,10 @@ Quando efetuado a configuração da regra do DSTNAT, informamos no MIKROTIK (que
 
 Então sabendo que o nosso IP PÚBLICO é o 177.1.1.2 que está configurado no MIKROTIK, fizemos um redirecionamento para que quando acessado pela PORTA 9090, que é a porta externa, tenha acesso ao nosso servidor linux com IP PRIVADO 10.10.10.200 que está configurado na PORTA 80, no caso, porta interna.
 
-# Acessando o servidor linux via HTTP
+# Acessando o servidor linux via terminal
 
 Com nosso MIKROTIK configurado (empresa A, Operado 1), acessamos nosso linux (Colaborador, Operadora 2), no terminal digitamos "curl -I http://177.1.1.2:9090". Com isso, fazemos a solicitação via navegador onde conseguirmemos alcançar nosso servidor linux, constando que obtivemos êxito no redirecionamento das portas.
+
+![image alt](https://github.com/Franco-Bruno/modelo-osi-and-nat/blob/main/imagens/acesso-webserver-and-port-tcp.png)
+
+Fonte: elaborado pelo autor (2026)
