@@ -56,7 +56,7 @@ Então sabendo que o nosso IP PÚBLICO é o 177.1.1.2 que está configurado no M
 
 # Acessando o servidor linux remotamente via terminal
 
-Com nosso MIKROTIK configurado (empresa A, Operadora 1), acessamos nosso linux (Colaborador, Operadora 2), no terminal digitamos "curl -I http://177.1.1.2:9090". Com isso, fazemos a solicitação via navegador onde conseguirmemos alcançar nosso servidor linux, constando que obtivemos êxito no redirecionamento das portas.
+Com nosso MIKROTIK configurado (empresa A, Operadora 1), acessamos nosso linux (Colaborador, Operadora 2) IP PRIVADO 192.168.10.10, no terminal digitamos "curl -I http://177.1.1.2:9090". Com isso, fazemos a solicitação via navegador onde conseguirmemos alcançar nosso servidor linux IP PRIVADO 10.10.10.200:80, constatando que obtivemos êxito no redirecionamento das portas.
 
 ![image alt](https://github.com/Franco-Bruno/modelo-osi-and-nat/blob/main/imagens/acesso-webserver-and-port-tcp.png)
 
