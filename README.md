@@ -50,4 +50,7 @@ Então temos aqui uma apresentação de como o SRCNAT funciona de forma prática
 
 # Regra de DSTNAT e captura de tráfego
 
-Quando efetuado a configuração da regra do DSTNAT, informamos no MIKROTIK (que está na EMPRESA A, Operadora 1), por qual porta externa será feito o acesso remoto, com isso, quando nosso IP Público tem uma porta configurada é possível acessar uma rede privada, desde tenha uma porta interna redirecionada para o IP do dispositivo que se queira acessar, logo, utilizamos aqui também a camada 3 (redes), a camada 4 (transportes) e um detalhe importante e que na configuração setamos o protocolo TCP, pois precisamos que os dados sejam entregues e de forma confiável. Feito isso, o roteador MIKROTIK que está na EMPRESA A, tem toda essa regra configurada. 
+Quando efetuado a configuração da regra do DSTNAT, informamos no MIKROTIK (que está na EMPRESA A, Operadora 1), por qual porta externa será feito o acesso remoto, com isso, quando nosso IP Público tem uma porta configurada é possível acessar uma rede privada, desde que tenha uma porta interna redirecionada para o IP do dispositivo que se queira acessar, logo, utilizamos aqui também a camada 3 (redes), a camada 4 (transportes) e um detalhe importante e que na configuração setamos o protocolo TCP, pois precisamos que os dados sejam entregues e de forma confiável. Feito isso, o roteador MIKROTIK (que está na EMPRESA A), tem toda essa regra configurada. 
+
+Então sabendo que o nosso IP PÚBLICO é o 177.1.1.2 que está configurado no MIKROTIK, fizemos um redirecionamento para que quando acessado pela PORTA 9090, que é a porta externa, tenha acesso ao nosso servidor linux com IP PRIVADO 10.10.10.200 que está configurado na PORTA 80, no caso, porta interna.
+
