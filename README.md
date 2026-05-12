@@ -7,11 +7,11 @@
 Fonte: elaborado pelo autor (2026)
 
 
-O objetivo com esse laboratório é apresentar como os dados trafegam e como as regras de NAT podem auxiliar na camada 3 (redes) do modelo OSI, ao decorrer desse projeto, seram apresentados os testes de encaminhamento de pacotes, como o SRCNAT atua, permitindo que aparelhos na rede privada tenham acesso à internet e como fazer um acesso remoto usando DSTNAT em redes privadas, utilizando o PORT FORWARD.
+O objetivo com esse laboratório é apresentar como os dados trafegam e como as regras de NAT podem auxiliar na camada 3 (redes) do modelo OSI, ao decorrer desse projeto, seram apresentados os testes de encaminhamento de pacotes, assim como o SRCNAT atua, permitindo que aparelhos na rede privada tenham acesso à internet e como fazer um acesso remoto usando DSTNAT em redes privadas, utilizando o PORT FORWARD.
 
 # Testando conectividade para a internet
 
-Nesta imagem o pc linux (Colaborador, Operadora 2) com IP privado 192.168.10.10 está fazendo um ping para a uol.com onde recebe retorno/respota de conexão através do protocolo (ICMP), aqui atua a camada 4 (transporte) que cria uma conexão com protocolo (TCP).
+Nesta imagem o PC Linux (Colaborador, Operadora 2) com IP privado 192.168.10.10 está fazendo um ping para a "uol.com" onde recebe retorno/respota de conexão através do protocolo (ICMP), aqui atua a camada 4 (transporte) que cria uma conexão com protocolo (TCP).
 
 ![image alt](https://github.com/Franco-Bruno/modelo-osi-and-nat/blob/90da5d697fb9c78d93a0033799de94f88742d035/imagens/test-ping-linux.png)
 
@@ -54,7 +54,7 @@ Quando efetuado a configuração da regra do DSTNAT, informamos no MIKROTIK (que
 
 Então sabendo que o nosso IP PÚBLICO é o 177.1.1.2 que está configurado no MIKROTIK, fizemos um redirecionamento para que quando acessado pela PORTA 9090, que é a porta externa, tenha acesso ao nosso servidor linux com IP PRIVADO 10.10.10.200 que está configurado na PORTA 80, no caso, porta interna.
 
-# Acessando o servidor linux via terminal
+# Acessando o servidor linux remotamente via terminal
 
 Com nosso MIKROTIK configurado (empresa A, Operadora 1), acessamos nosso linux (Colaborador, Operadora 2), no terminal digitamos "curl -I http://177.1.1.2:9090". Com isso, fazemos a solicitação via navegador onde conseguirmemos alcançar nosso servidor linux, constando que obtivemos êxito no redirecionamento das portas.
 
@@ -74,16 +74,16 @@ Conexãoes estabelecidas no MIKROTIK, mostrando a origem e destino.
 
 Fonte: elaborado pelo autor (2026)
 
-Podemos ainda ver de forma bem detalhada, como a origem, destino, portas.
+Podemos ainda ver de forma bem detalhada, como a origem, destino e portas.
 
 ![image alt](https://github.com/Franco-Bruno/modelo-osi-and-nat/blob/main/imagens/trafego-detalhado.png)
 
 Fonte: elaborado pelo autor (2026)
 
-E também foi preciso simular um roteamento(BGP) estre as redes para que pudessem cada uma ter acesso à internet, mas também serem alcançáveis entre si.
+E também foi preciso simular um "roteamento(BGP)" estre as redes para que pudessem cada uma ter acesso à internet, mas também serem alcançáveis entre si.
 
 ![image alt](https://github.com/Franco-Bruno/modelo-osi-and-nat/blob/main/imagens/roteamentoBGP-routes.png)
 
 Fonte: elaborado pelo autor (2026)
 
-# 
+# Versão funcional usando conceitos do MODELO OSI, ROTEAMENTO E NAT (SRCNAT, DSTNAT e PAT).
