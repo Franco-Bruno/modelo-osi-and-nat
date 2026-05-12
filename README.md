@@ -3,6 +3,7 @@
 ## Compreendendo o modelo OSI através de um laboratório e entendo algumas funções do NAT.
 
 ![image alt](https://github.com/Franco-Bruno/modelo-osi-and-nat/blob/46ee9880290473b9b8444979065a14552dd085dd/imagens/laboratorio.png)
+
 Fonte: elaborado pelo autor (2026)
 
 
@@ -13,6 +14,7 @@ O objetivo com esse laboratório é apresentar como os dados trafegam e como as 
 Nesta imagem o pc linux (Colaborador, Operadora 2) com IP privado 192.168.10.10 está fazendo um ping para a uol.com onde recebe retorno/respota de conexão através do protocolo (ICMP), aqui atua a camada 4 (transporte) que cria uma conexão com protocolo (TCP).
 
 ![image alt](https://github.com/Franco-Bruno/modelo-osi-and-nat/blob/90da5d697fb9c78d93a0033799de94f88742d035/imagens/test-ping-linux.png)
+
 Fonte: elaborado pelo autor (2026)
 
 # Regra de SRCNAT e captura de tráfego
@@ -23,7 +25,7 @@ Quando efetuado a configuração da regra do SRCNAT (roteador OPERADORA_2), info
 
 PAT (Port Address Translation) dentro do NAT (Network Address Translation)
 
-IP INTERNO: 192.168.10.9   --->  SAI COMO (IP público + porta) 100.1.1.2:10001
+IP INTERNO: 192.168.10.9   --->  SAI COMO (IP público + porta) 100.1.1.2:10001;
 IP INTERNO: 192.168.10.10  --->  SAI COMO (IP público + porta) 100.1.1.2:10002     
              
 
