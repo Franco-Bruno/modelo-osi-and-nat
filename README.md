@@ -25,7 +25,7 @@ Quando efetuado a configuração da regra do SRCNAT (roteador OPERADORA_2), info
 
 PAT (Port Address Translation) dentro do NAT (Network Address Translation)
 
-IP INTERNO: 192.168.10.9   --->  SAI COMO (IP público + porta) 100.1.1.2:10001;
+IP INTERNO: 192.168.10.9   --->  SAI COMO (IP público + porta) 100.1.1.2:10001
 IP INTERNO: 192.168.10.10  --->  SAI COMO (IP público + porta) 100.1.1.2:10002     
              
 
