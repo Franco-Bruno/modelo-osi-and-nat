@@ -19,13 +19,13 @@ Fonte: elaborado pelo autor (2026)
 
 Quando efetuado a configuração da regra do SRCNAT (roteador OPERADORA_2), informamos por qual saída ela será utilizada, com isso, quando nosso IP privado faz uma requisição para um site, ao chegar na camada 3 (redes), essa regra é acionada e saímos com um IP público para a INTERNET, ou dependendo da sua configuração com um IP de CGNAT, IP privado do provedor, funciona como NAT sobre NAT. Feito isso, o roteador guarda os estados das requisições para quando receber as informações solicitadas, saber para quem enviar na rede interna. 
 
-##Exemplo: 
+## Exemplo: 
 
 PAT (Port Address Translation) dentro do NAT (Network Address Translation)
 
-IP INTERNO                SAI COMO (IP público + porta)
-192.168.10.9              100.1.1.2:10001
-192.168.10.10             100.1.1.2:10002
+IP INTERNO: 192.168.10.9   --->  SAI COMO (IP público + porta) 100.1.1.2:10001
+IP INTERNO: 192.168.10.10  --->  SAI COMO (IP público + porta) 100.1.1.2:10002     
+             
 
 ![image alt](https://github.com/Franco-Bruno/modelo-osi-and-nat/blob/b4425996f647b593b9b914460a3eb6ab619c4955/imagens/regra-nat.png) 
 
